@@ -35,12 +35,16 @@ main (int argc, char *argv[])   // use the standard, if obscure, names
     cout << "Try again!" << endl;
     exit (0);   // quit the program  
   }
+//double again = atof(argv[2]);
 
+//for (double i = 0; i < again; i++)
+//{
   double radius = atof(argv[1]);    // convert 1st argument to a double
 
   double area = pi * radius * radius;	// area formula
 
   cout << "radius = " << radius << ",  area = " << area << endl;
+//}
 
   return 0;			// "0" for successful completion
 }

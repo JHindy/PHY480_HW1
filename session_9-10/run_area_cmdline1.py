@@ -22,23 +22,23 @@
 from subprocess import call    # make the "call" function available
 
 # Define the inputs at the top, so they are easy to find and change
-value_list1 = [1, 10, 100]
+value_list1 = [5, 10, 15, 20, 25]
 value_list2 = [1.0, 0.5, 0.25]
 
 # Ok, let's do it . . .
-print "\nFirst try a list of integers:"
+print ("\nFirst try a list of integers:")
 
 for radius in value_list1:    # don't forget the colon!
-  my_command = "./area_cmdline " + str(radius)  # convert radius to a string
+  my_command = "./area_cmdline.x " + str(radius)  # convert radius to a string
   retcode = call(my_command, shell=True)    # pass "my_command" to be executed
 
-print "\nNow try a list of decimal numbers:"
+print ("\nNow try a list of decimal numbers:")
 
 # note the alternative passing of the command
 for radius in value_list2:    # don't forget the colon!
-  my_command = ["./area_cmdline", str(radius)]  # convert radius to a string
+  my_command = ["./area_cmdline.x", str(radius)]  # convert radius to a string
   retcode = call(my_command)
   
-print "The last return code was", retcode
+print ("The last return code was", retcode)
 
 #*************************************************************************
